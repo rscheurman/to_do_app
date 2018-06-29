@@ -1,0 +1,13 @@
+<div class="page-header">
+  <h1>View Task</h1>
+</div>
+
+<ul class="list-unstyled list-inline">
+  <li class="list-inline-item"><a href="<%= toDosPath() %>" class="btn btn-info">View All</a></li>
+  <li class="list-inline-item"><a href="<%= editToDoPath({ to_do_id: toDo.ID })%>" class="btn btn-warning">Edit</a></li>
+  <li class="list-inline-item"><a href="<%= toDoPath({ to_do_id: toDo.ID })%>" data-method="DELETE" data-confirm="Are you sure?" class="btn btn-danger">Delete</a>
+</ul>
+
+<p>
+  <strong>Task</strong>: <%= toDo.Task %>
+</p>

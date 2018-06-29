@@ -1,0 +1,30 @@
+<div class="page-header">
+  <h1>To Do Tracker</h1>
+</div>
+<ul class="list-unstyled list-inline">
+  <li><a href="<%= newToDosPath() %>" class="btn btn-primary">Create New Task</a></li>
+</ul>
+
+<table class="table table-striped">
+  <thead>
+  <th>Tasks</th>
+    <th>&nbsp;</th>
+  </thead>
+  <tbody>
+    <%= for (toDo) in toDos { %>
+      <tr>
+      <td><%= toDo.Task %></td>
+        <td>
+          <div class="pull-right">
+            <a href="<%= editToDoPath({ to_do_id: toDo.ID }) %>" class="btn btn-warning">Edit</a>
+            <a href="<%= toDoPath({ to_do_id: toDo.ID }) %>" data-method="DELETE" class="btn btn-danger">Complete</a>
+          </div>
+        </td>
+      </tr>
+    <% } %>
+  </tbody>
+</table>
+
+<div class="text-center">
+  <%= paginator(pagination) %>
+</div>

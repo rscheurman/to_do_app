@@ -1,0 +1,8 @@
+<div class="page-header">
+  <h1>Edit Task</h1>
+</div>
+
+<%= form_for(toDo, {action: toDoPath({ to_do_id: toDo.ID }), method: "PUT"}) { %>
+  <%= partial("to_dos/form.html") %>
+  <a href="<%= toDoPath({ to_do_id: toDo.ID }) %>" class="btn btn-warning" data-confirm="Are you sure?">Cancel</a>
+<% } %>

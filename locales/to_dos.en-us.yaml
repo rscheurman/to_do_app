@@ -1,0 +1,6 @@
+- id: "to_do.created.success"
+  translation: "ToDo was successfully created."
+- id: "to_do.updated.success"
+  translation: "ToDo was successfully updated."
+- id: "to_do.destroyed.success"
+  translation: "ToDo was successfully destroyed."
